@@ -3,11 +3,8 @@ import Post from "./Post";
 import Put from "./Put";
 import Delete from "./Delete";
 
-let online = true
+// let online = true
 let offline = false
-
-console.log(online);
-console.log(offline);
 
 const getSiswa = () => Get(`siswa`, offline)
 const postSiswa = (data) => Post(`siswa`, offline, data)

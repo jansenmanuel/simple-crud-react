@@ -68,11 +68,22 @@ class UbahSiswa extends Component {
                         </div>
                         <div className="form-group">
                             <label><span className="text-danger">*</span> Jenis Kelamin</label>
-                            <input type="text" className="form-control" name="jenis_kelamin" required onChange={this.handleChange} defaultValue={this.props.data.jenis_kelamin} />
+                            <select className="form-control" name="jenis_kelamin" onChange={this.handleChange}>
+                                <option selected disabled >{this.props.data.jenis_kelamin}</option>
+                                <option value="Laki-Laki">Laki-Laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
                         </div>
                         <div className="form-group">
                             <label><span className="text-danger">*</span> Agama</label>
-                            <input type="text" className="form-control" name="agama" required onChange={this.handleChange} defaultValue={this.props.data.agama} />
+                            <select className="form-control" name="agama" onChange={this.handleChange}>
+                                <option selected disabled>{this.props.data.agama}</option>
+                                <option value="Kristen">Kristen</option>
+                                <option value="Islam">Islam</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Budha">Budha</option>
+                                <option value="Konghucu">Konghucu</option>
+                            </select>
                         </div>
                         <div className="form-group">
                             <label><span className="text-danger">*</span> Alamat</label>
