@@ -1,3 +1,14 @@
 {
-  "siswa": []
+  "siswa": [
+    {
+      "id": 1601807693104,
+      "nisn": "00288971777",
+      "nama": "Jansen Manuel",
+      "tempat_lahir": "Jakarta",
+      "tanggal_lahir": "2002-07-01",
+      "jenis_kelamin": "Laki-Laki",
+      "agama": "Kristen",
+      "alamat": "Palmerah"
+    }
+  ]
 }
