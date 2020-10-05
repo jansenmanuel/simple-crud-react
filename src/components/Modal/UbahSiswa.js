@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import swal from 'sweetalert'
 import API from '../../services/Service'
 
 class UbahSiswa extends Component {
@@ -20,8 +21,15 @@ class UbahSiswa extends Component {
             .then(res => {
                 console.log(res);
                 console.log(res.data);
-                alert('Berhasil diubah!')
-                window.location.reload()
+                swal({
+                    title: "Berhasil!",
+                    text: "Data siswa berhasil diubah!",
+                    icon: "success",
+                    button: false,
+                    timer: 1500
+                }).then(() => {
+                    window.location.reload();
+                });
             })
     }
 

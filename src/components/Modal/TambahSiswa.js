@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import swal from 'sweetalert'
 import API from '../../services/Service'
 
 class TambahSiswa extends Component {
@@ -20,8 +21,15 @@ class TambahSiswa extends Component {
             .then(res => {
                 console.log(res);
                 console.log(res.data);
-                alert('Berhasil ditambah!')
-                window.location.reload()
+                swal({
+                    title: "Berhasil!",
+                    text: "Data siswa berhasil ditambahkan!",
+                    icon: "success",
+                    button: false,
+                    timer: 1500
+                }).then(() => {
+                    window.location.reload();
+                });
             })
     }
 
@@ -73,6 +81,7 @@ class TambahSiswa extends Component {
                         <div className="form-group">
                             <label><span className="text-danger">*</span> Jenis Kelamin</label>
                             <select className="form-control" name="jenis_kelamin" onChange={this.handleChange}>
+                                <option selected disabled>-- Jenis Kelamin --</option>
                                 <option value="Laki-Laki">Laki-Laki</option>
                                 <option value="Perempuan">Perempuan</option>
                             </select>
@@ -80,6 +89,7 @@ class TambahSiswa extends Component {
                         <div className="form-group">
                             <label><span className="text-danger">*</span> Agama</label>
                             <select className="form-control" name="agama" onChange={this.handleChange}>
+                                <option selected disabled>-- Agama --</option>
                                 <option value="Kristen">Kristen</option>
                                 <option value="Islam">Islam</option>
                                 <option value="Hindu">Hindu</option>

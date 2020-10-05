@@ -31,24 +31,14 @@
       "alamat": "Rumah"
     },
     {
-      "id": 1601826321647,
-      "nisn": "0123456789",
-      "nama": "Manuel Jansen",
-      "tempat_lahir": "Rumah",
-      "tanggal_lahir": "2012-12-12",
-      "jenis_kelamin": "Laki-Laki",
-      "agama": "Kristen",
-      "alamat": "Di tinggal"
-    },
-    {
-      "id": 1601827328653,
-      "nisn": "1231231231",
-      "nama": "Leunam Nesnaj",
-      "tempat_lahir": "Tempat Tidur",
-      "tanggal_lahir": "1111-11-11",
-      "jenis_kelamin": "Laki-Laki",
-      "agama": "Hindu",
-      "alamat": "Bumi"
+      "id": 1601859880556,
+      "nisn": "0028897177",
+      "nama": "Jansen Manuel",
+      "tempat_lahir": "Jakarta",
+      "tanggal_lahir": "2002-07-01",
+      "jenis_kelamin": "Perempuan",
+      "agama": "Islam",
+      "alamat": "Jakarta"
     }
   ]
 }

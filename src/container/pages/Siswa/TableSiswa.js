@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import swal from 'sweetalert'
 import MyEmpty from '../../../components/Empty/Empty'
 import DetailSiswa from '../../../components/Modal/DetailSiswa'
 import TambahSiswa from '../../../components/Modal/TambahSiswa'
@@ -13,7 +14,6 @@ export default class TableSiswa extends Component {
     getDataSiswa = () => {
         API.getSiswa()
             .then(res => {
-                console.log(res);
                 this.setState({
                     students: res
                 });
@@ -25,12 +25,28 @@ export default class TableSiswa extends Component {
     }
 
     handleDelete = id => {
-        console.log(id);
-        API.deleteSiswa(id)
-            .then(() => {
-                alert('Berhasil dihapus!')
-                window.location.reload()
-            })
+        swal({
+            title: "Apakah anda yakin?",
+            text: "Data yang sudah dihapus tidak dapat dipulihkan kembali!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                API.deleteSiswa(id)
+                swal({
+                    title: "Berhasil!",
+                    text: "Data siswa berhasil dihapus!",
+                    icon: "success",
+                    button: false,
+                    timer: 1500
+                }).then(() => {
+                    window.location.reload();
+                });
+            } else {
+                swal("Data batal dihapus!");
+            }
+        })
     }
 
     render() {
